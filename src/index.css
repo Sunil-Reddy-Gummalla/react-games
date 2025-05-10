@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0B2434;
+  color: #D9D9D9;
+  padding: 1rem;
+  height: 100vh;
+}
+
+div#root {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.game-block {
+  max-width: 30rem;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+header {
+  text-align: center;
+}
+
+header>h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+
+header>p {
+  font-size: 0.875rem;
+  max-width: 22rem;
+  color: #8e8e8e;
+}
+
+
+/* Tenzis css */
+.tenzies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dices-container {
+  max-width: 30rem;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.dices-container button {
+  height: 4rem;
+  width: 4rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border: none;
+  background-color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+button.roll-dice {
+  height: 4rem;
+  width: auto;
+  min-width: 10rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #5035ff;
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Assembly css code */
+
+.assembly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+section.game-status {
+  background-color: #10A95B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F4DA;
+  border-radius: 0.25rem;
+  margin-block: 2rem;
+  width: 100%;
+  min-height: 5rem;
+  justify-content: center;
+}
+
+section.game-status.lost {
+  background-color: red !important;
+}
+
+section.game-status.farewell {
+  background-color: #5035ff !important;
+}
+
+section.game-status>h2 {
+  font-size: 1.25rem;
+  margin: 0.25rem;
+}
+
+section.game-status>p {
+  margin: 0.25rem;
+}
+
+section.language-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  max-width: 22rem;
+  margin-bottom: 2rem;
+}
+
+span.chip {
+  border-radius: 0.175rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+span.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section.word {
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+section.word>span {
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F9F4DA;
+}
+
+section.word>span.show {
+  opacity: 1;
+}
+
+section.word>span.hide {
+  opacity: 0.1;
+}
+
+section.keyboard {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+section.keyboard>button {
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #FCBA29;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+section.keyboard>button.correct {
+  background-color: #10A95B;
+}
+
+section.keyboard>button.wrong {
+  background-color: #Ec5d49;
+}
+
+section.keyboard>button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+section.submit {
+  display: flex;
+  justify-content: center;
+}
+
+section.submit>button {
+  background-color: #5035ff;
+  color: #d7d7d7;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+/* meme generator css */
+
+.meme-generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: grid;
+  grid-template: auto auto / 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form input {
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #D5D4D8;
+  text-indent: 0.25rem;
+}
+
+.form button {
+  grid-column: 1 / -1;
+  border-radius: 0.25rem;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form input,
+.form button {
+  min-height: 2.25rem;
+}
+
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme>img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.meme span {
+  position: absolute;
+  text-align: center;
+  margin-block: 0.25rem;
+  padding-inline: 0.25rem;
+  font-family: impact, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 0.25rem #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
